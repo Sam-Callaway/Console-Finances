@@ -92,7 +92,7 @@ console.log("--------------------------")
 
 console.log ("Total months: " + finances.length) //log the length of the array to show how many months we have
 
-
+//Loop through the array adding each profit figure to a profitTotal var to find the total net profit
 var profitTotal = 0
 for (i=0; i < finances.length; i++)
 {
@@ -100,7 +100,7 @@ profitTotal = profitTotal + finances[i][1]
 }
 console.log ("Total net profit: " + profitTotal)
 
-
+//Loop through the array adding the totals of the current month profit minus previous month profit to find the total change in profit. Then divide by number of months to find average.
 var totalChange = 0
 for (i=1; i < finances.length; i++) //start the loop on the 2nd element because there is no change to calculate for first month as no month prior
 {
