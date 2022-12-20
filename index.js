@@ -98,6 +98,7 @@ for (i=0; i < finances.length; i++)
 {
 profitTotal = profitTotal + finances[i][1]
 }
+
 console.log ("Total net profit: " + profitTotal)
 
 //Loop through the array adding the totals of the current month profit minus previous month profit to find the total change in profit. Then divide by number of months to find average.
@@ -107,7 +108,7 @@ for (i=1; i < finances.length; i++) //start the loop on the 2nd element because 
 totalChange = totalChange + (finances[i][1] - finances[i-1][1])
 }
 var averageChange = totalChange / (finances.length - 1 ); //finances.length -1 because we don't have a change figure for the first element of the array so to find average profit change you want to divide by the number of figures we have for change which is 1 less than number of months
-console.log ("Average change in profit: " + averageChange)
+console.log ("Average change in profit: " + parseFloat(averageChange).toFixed(2)) //Only show figure to 2 decimal places
 
 var greatestIncreaseMonth = ""
 var greatestIncreaseAmount = 0
